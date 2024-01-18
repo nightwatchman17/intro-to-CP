@@ -6,6 +6,7 @@ void Solve()
 {
      cout << "TEST\n";
      cout << "update Something\n";
+     cout << "new\n";
 }
 
 int main()
