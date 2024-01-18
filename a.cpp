@@ -5,6 +5,7 @@ using ll = long long;
 void Solve()
 {
      cout << "TEST\n";
+     cout << "update Something\n";
 }
 
 int main()
