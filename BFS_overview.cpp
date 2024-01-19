@@ -124,3 +124,27 @@ int dy[] = {0, 0, -1, 1, -1, 1, -1, 1};
 // knights move
 int kdx[] = {1, 1, -1, -1, 2, 2, -2, -2};
 int kdy[] = {2, -2, 2, -2, 1, -1, 1, -1};
+
+void bfs(pair<int, int> src)
+{
+     memset(vis, 0, sizeof vis);
+     queue<pair<int, int>> q;
+     q.push({src.first, src.second});
+     vis[src.first][src.second] = 1;
+     while (!q.empty())
+     {
+          pair<int, int> at = q.front();
+          q.pop();
+          for (int i = 0; i < 4; i++)
+          {
+               int nx = at.first + dx[i];
+               int ny = at.second + dy[i];
+               if (nx >= 1 and nx <= row and ny >= 1 and ny <= col and (!vis[nx][ny]) and (arr[nx][ny] != '#'))
+               {
+                    q.push({nx, ny});
+                    vis[nx][ny] = 1;
+               }
+          }
+     }
+}
+//-------
