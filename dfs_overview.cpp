@@ -88,3 +88,16 @@ int kdx[] = {1, 1, -1, -1, 2, 2, -2, -2};
 int kdy[] = {2, -2, 2, -2, 1, -1, 1, -1};
 
 // DFS on 2-D Grid (By problem solving)
+int row, col;
+char arr[row][col];
+bool vis[row][col];
+void dfs(pair<int, int> src)
+{
+     vis[src.first][src.second] = 1;
+     for (int i = 0; i < 4; i++)
+     {
+          int nx = src.first + dx[i], ny = src.second + dy[i];
+          if (nx >= 1 and nx <= row and ny >= 1 and ny <= col and (!vis[nx][ny]) and (arr[nx][ny] != '#'))
+               dfs({nx, ny});
+     }
+}
