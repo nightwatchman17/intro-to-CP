@@ -145,3 +145,22 @@ void dfs(int src)
 //     and
 //     OUT TIME of X < OUT TIME of Y
 //-------------------------------------------------------
+
+//--------------------------
+// store Subtree size of all nodes using DFS
+
+// subtree size of Root node = 1 + Subtree size of it's Childs
+
+bool vis[inf];
+int subtree_size[inf];
+int dfs_SubtreeSize(int src)
+{
+     vis[src] = 1;
+     int cur_sz = 1;
+     for (auto u : adj[src])
+          if (!vis[u])
+               cur_sz += dfs_SubtreeSize(u);
+     return subtree_size[src] = cur_sz;
+}
+
+//---------------------------------------------
