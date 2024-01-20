@@ -147,4 +147,41 @@ void bfs(pair<int, int> src)
           }
      }
 }
-//-------
+//----------------------------------------------
+
+// 0-1 BFS
+
+// RElated Problem : https://codeforces.com/contest/1900/problem/C
+
+const int inf = 3e5 + 100;
+vector<pair<int, int>> adj[inf];
+int cost[inf];
+int node;
+void bfs_01(int src)
+{
+     for (int i = 0; i < node + 10; i++)
+          cost[i] = INT_MAX; // initializing with infinity
+     deque<int> dq;
+     dq.push_front(src);
+     cost[src] = 0;
+     while (!dq.empty())
+     {
+          int at = dq.front();
+          dq.pop_front();
+          for (auto u : adj[at])
+          {
+               int child = u.first;
+               int wt = u.second;
+               if (cost[at] + wt < cost[child])
+               {
+                    cost[child] = cost[at] + wt;
+                    if (wt == 1)
+                         dq.push_back(child);
+                    else
+                         dq.push_front(child);
+               }
+          }
+     }
+}
+
+//-------------------------------------------
