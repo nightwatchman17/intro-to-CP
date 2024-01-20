@@ -101,3 +101,23 @@ void dfs(pair<int, int> src)
                dfs({nx, ny});
      }
 }
+
+// Cycle Detection by DFS
+
+bool vis[inf];
+bool isCycle(int src, int par)
+{
+     vis[src] = 1;
+     for (auto u : adj[src])
+     {
+          if (!vis[u])
+          {
+               if (isCycle(u, src) == true)
+                    return true;
+          }
+          else if (u != par)
+               return true;
+     }
+     return false;
+}
+//----------------------------------------------------
