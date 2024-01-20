@@ -137,13 +137,11 @@ void dfs(int src)
 //------------------------------------------------------
 
 // ## problem
-/*
-"Given N(1e5) nodes and Q queries. In each Query, given 2 nodes, find whether one node lies in the subree of another node."
+/*"Given N(1e5) nodes and Q queries. In each Query, given 2 nodes, find whether one node lies in the subree of another node."
 
     "FACT - if node X is in the Subtree of node Y" -
 
     IN TIME of X > IN TIME of Y
     and
-    OUT TIME of X < OUT TIME of Y
-*/
+    OUT TIME of X < OUT TIME of Y */
 //-------------------------------------------------------
