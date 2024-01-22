@@ -29,5 +29,7 @@ Graph Topics:
     - BFS on 2-D Grid
     - Multi-Source BFS
     - 0-1 BFS
-
-6. Dijkstra // SSSP in Weighthed Graph  
+6. Topological Sorting
+7. Disjoint Set Union
+8. Dijkstra // SSSP in Weighthed Graph
+    - shortest path printing by Dijkstra
