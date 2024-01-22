@@ -13,6 +13,7 @@ Graph Topics:
     - Size of Connected Components
     - Bipartite ( Bicoloring ) Checking by DFS
     - Single Source Shortest Path (on Tree) by DFS // SSSP
+    - whether a given Sequence of Nodes are Valid with DFS Traversal
     - DFS on 2-D Grid // Flood Fill
     - Cycle Detection in Graph by DFS
     - IN time, Out Time (Discovery, Finishing)
@@ -23,6 +24,7 @@ Graph Topics:
 5. BFS Variations
     - Single Source Shortest Path in Graph
     - Printing Shortest Path Sequence
+    - whether a given Sequence of Nodes are Valid with BFS Traversal
     - Bipartite Checking by BFS
     - BFS on 2-D Grid
     - Multi-Source BFS

@@ -164,3 +164,58 @@ int dfs_SubtreeSize(int src)
 }
 
 //---------------------------------------------
+//-------------------------------------------------
+
+// ## a sequence is valid in DFS Traversal or not
+
+// If a node X is visited before a node Y, then it's safe to assume X appears before Y in every adjacency list. So initially we can sort each list, using as comparator the positions in the Given Sequence. Then we can just run a DFS and check if we visit the nodes in the given order.
+
+using ll = long long;
+const int inf = 1e5 + 100;
+int node, edge;
+vector<int> adj[inf];
+bool vis[inf];
+vector<int> dfs_path, given;
+int pos[inf];
+
+void dfs(int src)
+{
+     vis[src] = 1;
+     dfs_path.push_back(src); // dfs path visited
+     for (auto u : adj[src])
+          if (!vis[u])
+               dfs(u);
+}
+bool cmp(int a, int b)
+{
+     if (pos[a] < pos[b])
+          return true;
+     return false;
+}
+void Solve()
+{
+     cin >> node >> edge;
+     for (int i = 1; i <= node; i++)
+     {
+          int x;
+          cin >> x;
+          given.push_back(x);
+          pos[x] = i; // storing the node order of input (positions)
+     }
+     while (edge--)
+     {
+          int u, v;
+          cin >> u >> v;
+          adj[u].push_back(v);
+          adj[v].push_back(u);
+     }
+     for (int i = 1; i <= node; i++) // sort adjacency list according to input order
+          sort(adj[i].begin(), adj[i].end(), cmp);
+     dfs(1);
+     if (given == dfs_path)
+          cout << 1 << '\n';
+     else
+          cout << 0 << '\n';
+}
+
+//---------------------------------------------------

@@ -222,3 +222,76 @@ void dijkstra(int src)
 }
 
 // practice problem (Classical)- https://cses.fi/problemset/task/1671/
+
+//-------------------------------------------------
+
+// ## a sequence is valid in BFS Traversal or not
+
+// If a node X is visited before a node Y, then it's safe to assume X appears before Y in every adjacency list. So initially we can sort each list, using as comparator the positions in the Given Sequence. Then we can just run a BFS and check if we visit the nodes in the given order.
+
+int node;
+vector<int> adj[inf];
+bool vis[inf];
+vector<int> bfs_path;
+int pos[inf];
+void bfs(int src)
+{
+     queue<int> q;
+     q.push(src);
+     vis[src] = 1;
+     bfs_path.push_back(src);
+     while (!q.empty())
+     {
+          int at = q.front();
+          q.pop();
+          for (auto u : adj[at])
+          {
+               if (!vis[u])
+               {
+                    q.push(u);
+                    vis[u] = 1;
+                    bfs_path.push_back(u);
+               }
+          }
+     }
+}
+bool cmp(int a, int b)
+{
+     if (pos[a] < pos[b])
+          return true;
+     return false;
+}
+
+void Solve()
+{
+     cin >> node;
+     for (int i = 1; i < node; i++)
+     {
+          int u, v;
+          cin >> u >> v;
+          adj[u].push_back(v);
+          adj[v].push_back(u);
+     }
+
+     vector<int> given;
+     for (int i = 1; i <= node; i++)
+     {
+          int x;
+          cin >> x;
+          given.push_back(x);
+          pos[x] = i;
+     }
+
+     for (int i = 1; i <= node; i++) // sort adjacency list according to input order
+          sort(adj[i].begin(), adj[i].end(), cmp);
+
+     bfs(1);
+
+     if (bfs_path == given)
+          cout << "Yes\n";
+     else
+          cout << "No\n";
+}
+
+codeforcce : Valid BFS problem
+             //-------------------------------------------------------
