@@ -227,7 +227,9 @@ void dijkstra(int src)
 
 // ## a sequence is valid in BFS Traversal or not
 
-// If a node X is visited before a node Y, then it's safe to assume X appears before Y in every adjacency list. So initially we can sort each list, using as comparator the positions in the Given Sequence. Then we can just run a BFS and check if we visit the nodes in the given order.
+// If a node X is visited before a node Y, then it's safe to assume X appears before Y in every adjacency list.
+// So initially we can sort each list, using as comparator the positions in the Given Sequence.
+// Then we can just run a BFS and check if we visit the nodes in the given order.
 
 int node;
 vector<int> adj[inf];
@@ -293,5 +295,5 @@ void Solve()
           cout << "No\n";
 }
 
-codeforcce : Valid BFS problem
-             //-------------------------------------------------------
+// codeforcce : Valid BFS problem
+//-------------------------------------------------------
