@@ -16,12 +16,12 @@ Graph Topics:
     - whether a given Sequence of Nodes are Valid with DFS Traversal
     - DFS on 2-D Grid // Flood Fill
     - Cycle Detection in Graph by DFS
+    - Finding and Printing Cycle
     - IN time, Out Time (Discovery, Finishing)
           * Whether A Node is in the Subtree of another Node
     - Diametre of a Tree
     - Subtree Size by DFS in O(N) 
-    - Finding and Printing Cycle
-
+    
 5. BFS Variations
     - Single Source Shortest Path in Graph
     - Printing Shortest Path Sequence

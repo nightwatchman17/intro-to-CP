@@ -121,7 +121,37 @@ bool isCycle(int src, int par)
      return false;
 }
 //----------------------------------------------------
+// cycle findinding and print cycle (any one e cycle only)
+// problem link -https://cses.fi/problemset/result/8290525/
+const int inf = 2e5;
+int node, edge;
+vector<int> adj[inf];
+vector<int> _cycle;
+bool vis[inf];
+bool dfs(int src, int par)
+{
+     vis[src] = 1;
+     _cycle.push_back(src);
+     for (auto u : adj[src])
+     {
+          if (!vis[u])
+          {
+               if (dfs(u, src) == true)
+                    return true;
+          }
+          else if (u != par)
+          {
+               _cycle.push_back(u);
+               return true;
+          }
+     }
+     _cycle.pop_back();
+     return false;
+}
 
+// if this function return true then the _cycle vector should be printed from the last ,until it finds the last node again
+
+//------------------------------------
 bool vis[inf];
 int IN[inf], OUT[inf];
 int timer = 1;
