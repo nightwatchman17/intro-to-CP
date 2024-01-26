@@ -3,7 +3,7 @@
 // Ordering Objects Based on Requirement
 // U --> V (U has to be done before V)
 // Graph Must be Directed Acyclic to have valid sorting
-// In the sorted list of Topology Sorting, al edges appears from left to right. By this property we can determine, whethe a sequence is valid or not for a given graph
+// In the sorted list of Topology Sorting, all edges appears from left to right. By this property we can determine, whethe a sequence is valid or not for a given graph
 // Kahn's Algorithm - way of Topological Sorting
 
 // 1) Each Node we choose with in degree 0
