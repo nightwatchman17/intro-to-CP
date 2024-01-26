@@ -47,4 +47,4 @@ Graph Topics:
     - Kruskal's Algorithm
     - Prim's Algorithm
 12. Floydd Warshal
-13. Bellman Form
+13. Bellman Ford
