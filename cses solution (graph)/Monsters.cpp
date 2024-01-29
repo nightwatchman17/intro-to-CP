@@ -98,8 +98,8 @@ bool bfs_A()
           {
                int nx = at.first + dx[i];
                int ny = at.second + dy[i];
-               if (nx >= 1 and nx <= row and ny >= 1 and ny <= col and arr[nx][ny] != '#' and levA[nx][ny] == -1 and (levA[at.first][at.second] + 1 < levM[nx][ny] or levM[nx][ny] == -1)) // either level of 'A' is smaller or monster doesn't visit to the cell at all
-               {
+               if (nx >= 1 and nx <= row and ny >= 1 and ny <= col and arr[nx][ny] != '#' and levA[nx][ny] == -1 and (levA[at.first][at.second] + 1 < levM[nx][ny] or levM[nx][ny] == -1))
+               { // either level of 'A' is smaller or monster doesn't visit to the cell at all
                     q.push({nx, ny});
                     levA[nx][ny] = levA[at.first][at.second] + 1;
                     dirA[nx][ny] = dxy_char[i]; // for path retrival (interesting idea)
