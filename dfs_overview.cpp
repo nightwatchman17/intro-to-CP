@@ -152,6 +152,11 @@ bool dfs(int src, int par)
 // if this function return true then the _cycle vector should be printed from the last ,until it finds the last node again
 
 //------------------------------------
+//---------------------------------------------------
+// cycle detection in directed graph by DFS
+
+//------------------------------------------------------
+
 bool vis[inf];
 int IN[inf], OUT[inf];
 int timer = 1;
