@@ -1,0 +1,1 @@
+{"name":"Local: Counting Rooms","url":"d:\\intro-to-CP\\cses solution (graph)\\Counting Rooms.cpp","tests":[{"id":1706497023716,"input":"5 8\n########\n#..#...#\n####.#.#\n#..#...#\n########","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\intro-to-CP\\cses solution (graph)\\Counting Rooms.cpp","group":"local","local":true}
