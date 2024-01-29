@@ -1,17 +1,17 @@
 // problem link : https://cses.fi/problemset/task/1192
 // Hint : Connected Compopnent in 2-D Grid. Apply DFS
 
-//=========================================================
+//-----------------------------------------------------------
 
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
 
-const int inf = 2000;
+const int inf = 1050;
 int n, m;
 char arr[inf][inf]; // for input
 bool vis[inf][inf]; 
-int dx[] = {1, -1, 0, 0};
+int dx[] = {1, -1, 0, 0}; // direction array
 int dy[] = {0, 0, 1, -1};
 
 bool valid(int x, int y)
