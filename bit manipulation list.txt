@@ -1,0 +1,17 @@
+Bit Manipulation
+----------------
+
+1. Binary Representation
+2. AND, OR, NOT, XOR/XOR properties
+3. Left Shift, Right Shift
+4. Check, Set, Unset, Toggle bit, Count Set bits
+5. Is Power of 2
+6. Multiply, Division, MOD by 2^k
+7. Pair Sum XOR
+8. All pair XOR
+9. Tricks - Swapping, Even-Odd
+10. BitMasking (generates all possible combination)
+11. c++ keywords
+
+Resources : CodeNCode, GKG, CP-Algo
+
