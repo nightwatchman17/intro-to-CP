@@ -7,16 +7,16 @@ jobs:
     runs-on: ubuntu-latest  # Use the latest version of Ubuntu for the build environment
 
     steps:
-    - uses: actions/checkout@v2  # Check out your repository code
+    - uses: actions/checkout@v3  # Check out your repository code
 
     - name: Install LaTeX
       run: sudo apt-get install -y texlive-full  # Install a full LaTeX distribution
 
     - name: Compile LaTeX document
-      run: pdflatex codebook testing.tex  # Replace 'main.tex' with the name of your LaTeX file
+      run: pdflatex codebook__testing.tex  # Replace 'main.tex' with the name of your LaTeX file
 
     - name: Upload PDF
       uses: actions/upload-artifact@v3  # Updated version v3
       with:
         name: codebook  # This will name your PDF artifact 'codebook'
-        path: codebook test.pdf  # The path to the compiled PDF file (replace 'main.pdf' if needed)
+        path: codebook main.pdf  # The path to the compiled PDF file (replace 'main.pdf' if needed)
