@@ -19,4 +19,4 @@ jobs:
       uses: actions/upload-artifact@v3  # Updated version v3
       with:
         name: codebook  # This will name your PDF artifact 'codebook'
-        path: codebook main.pdf  # The path to the compiled PDF file (replace 'main.pdf' if needed)
+        path: main.pdf  # The path to the compiled PDF file (replace 'main.pdf' if needed)
